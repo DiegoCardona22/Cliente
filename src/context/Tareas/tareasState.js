@@ -1,4 +1,4 @@
-import React, {useReducer} from 'react';
+import React, { useReducer } from 'react';
 import TareasContext from './tareasContext';
 import TareasReducer from './tareasReducer';
 import clienteAxios from '../../config/axios';
@@ -39,7 +39,6 @@ const TareasState = (props) => {
 
     const agregarTarea = async tarea => {
         try {
-            const resultado = await clienteAxios.post('/api/tareas', tarea);
             dispatch({
                 type: AGREGAR_TAREA,
                 payload: tarea
